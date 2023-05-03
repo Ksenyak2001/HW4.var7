@@ -7,9 +7,11 @@ package mephi2023.mathproject;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -60,6 +62,73 @@ public class DataReader {
         }        
         ds.setNames(names);
         ds.setSamples(samples);       
+    }
+    
+    private void AddNamesRow(Row row, ArrayList<String> namesSample){
+        row.createCell(0).setCellValue("Parameters");
+        int numbCell = 1;
+        for (String s : namesSample){
+            Cell nameTemp = row.createCell(numbCell++);
+            nameTemp.setCellValue(s);        
+        }
+        
+        
+        
+    }
+    
+    
+    
+    public void ExportXLSX(DataStorage ds, String fileName) throws FileNotFoundException, IOException{
+        FileOutputStream fous;
+        fous = new FileOutputStream(fileName);
+        Workbook book = new HSSFWorkbook();
+        Sheet sheet = book.createSheet("Results");
+        String[] names = ds.getNamesParameters();
+        String[] names2 = ds.getNamesParameters2();
+        int names_length = names.length;
+        int n = names_length + names2.length;
+        ArrayList<ArrayList<Object>> results = ds.getResults();
+        
+        if (results.size() <= 0){
+            throw new IOException("Данные не выгружены, т.к. они отсутствуют");
+        }
+        ArrayList<String> namesSample = ds.getNames();
+        ArrayList<String> namesCorSample = ds.getNames2();
+
+        int shift = 0;
+        for (int i = 0; i < n; ++i){
+            Row row = sheet.createRow(i+shift);
+            if (i == 0){
+                AddNamesRow(row, namesSample);
+                shift++;
+                row = sheet.createRow(i+shift);
+            } 
+            if (i == names_length){                
+                AddNamesRow(row, namesCorSample);
+                shift++;
+                row = sheet.createRow(i+shift);
+            }
+            
+            int j = 0;
+            
+            Cell param = row.createCell(j++);
+            if (i < names_length){
+                param.setCellValue(names[i]);
+            } else {
+                param.setCellValue(names2[i-names_length]);
+            }
+            
+            for (ArrayList<Object> r : results){
+                Cell value = row.createCell(j++);
+        
+                value.setCellValue(((Number) r.get(i)).doubleValue());
+            }
+        }
+        sheet.autoSizeColumn(1);
+        book.write(fous);
+        book.close();   
+    
+    
     }
     
 }

@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"mephi2023.mathproject","l":"DataManipulation"},{"p":"mephi2023.mathproject","l":"DataReader"},{"p":"mephi2023.mathproject","l":"DataStorage"},{"p":"mephi2023.mathproject","l":"MathProject"},{"p":"mephi2023.mathproject","l":"VisualFrame"}];updateSearchResults();

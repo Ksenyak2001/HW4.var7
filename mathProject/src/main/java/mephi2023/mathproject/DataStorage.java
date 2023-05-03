@@ -19,9 +19,11 @@ public class DataStorage {
     ArrayList<ArrayList<Double>> samples;
     ArrayList<String> names;
     ArrayList<String> names2;
-    
+    ArrayList<ArrayList<Object>> results;
+ 
     public DataStorage(){        
         samples = new ArrayList<>();
+        results = new ArrayList<>();
         names = new ArrayList<>();
         names2 = new ArrayList<>();
     }
@@ -47,6 +49,9 @@ public class DataStorage {
         return samples;
     }
 
+    public ArrayList<ArrayList<Object>> getResults() {
+        return results;
+    }
     public ArrayList<String> getNames() {
         return names;
     }
@@ -54,7 +59,10 @@ public class DataStorage {
     public ArrayList<String> getNames2() {
         return names2;
     }
-    
+   
+    public void setResults(ArrayList<ArrayList<Object>> r) {
+        results = r;
+    }
     private void fillNames2(){
         for (int i = 0; i < names.size(); ++i){
             names2.add(names.get(i%names.size()) + " & " + names.get((i + 1)%names.size()));
