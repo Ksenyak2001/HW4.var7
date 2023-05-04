@@ -1,7 +1,7 @@
 @options
 @packages
 -classpath
-'D:/Users/Kseny/.m2/repository/org/apache/maven/plugins/maven-compiler-plugin/3.8.1/maven-compiler-plugin-3.8.1.jar;D:/Users/Kseny/.m2/repository/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0.jar;D:/Users/Kseny/.m2/repository/org/apache/maven/maven-model/3.0/maven-model-3.0.jar;D:/Users/Kseny/.m2/repository/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar;D:/Users/Kseny/.m2/repository/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.jar;D:/Users/Kseny/.m2/repository/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-noaop.jar;D:/Users/Kseny/.m2/repository/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0.jar;D:/Users/Kseny/.m2/repository/org/codehaus/plexus/plexus-utils/2.0.4/plexus-utils-2.0.4.jar;D:/Users/Kseny/.m2/repository/org/apache/maven/maven-core/3.0/maven-core-3.0.jar;D:/Users/Kseny/.m2/repository/org/apache/maven/maven-settings/3.0/maven-settings-3.0.jar;D:/Users/Kseny/.m2/repository/org/apache/maven/maven-settings-builder/3.0/maven-settings-builder-3.0.jar;D:/Users/Kseny/.m2/repository/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.jar;D:/Users/Kseny/.m2/repository/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0.jar;D:/Users/Kseny/.m2/repository/org/sonatype/aether/aether-impl/1.7/aether-impl-1.7.jar;D:/Users/Kseny/.m2/repository/org/sonatype/aether/aether-spi/1.7/aether-spi-1.7.jar;D:/Users/Kseny/.m2/repository/org/sonatype/aether/aether-api/1.7/aether-api-1.7.jar;D:/Users/Kseny/.m2/repository/org/sonatype/aether/aether-util/1.7/aether-util-1.7.jar;D:/Users/Kseny/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14.jar;D:/Users/Kseny/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3.jar;D:/Users/Kseny/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar;D:/Users/Kseny/.m2/repository/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar;D:/Users/Kseny/.m2/repository/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar;D:/Users/Kseny/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.2.1/maven-shared-utils-3.2.1.jar;D:/Users/Kseny/.m2/repository/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar;D:/Users/Kseny/.m2/repository/org/codehaus/plexus/plexus-java/0.9.10/plexus-java-0.9.10.jar;D:/Users/Kseny/.m2/repository/org/ow2/asm/asm/6.2/asm-6.2.jar;D:/Users/Kseny/.m2/repository/com/thoughtworks/qdox/qdox/2.0-M8/qdox-2.0-M8.jar;D:/Users/Kseny/.m2/repository/org/codehaus/plexus/plexus-compiler-api/2.8.4/plexus-compiler-api-2.8.4.jar;D:/Users/Kseny/.m2/repository/org/codehaus/plexus/plexus-compiler-manager/2.8.4/plexus-compiler-manager-2.8.4.jar;D:/Users/Kseny/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar;D:/Users/Kseny/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar;D:/Users/Kseny/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar;D:/Users/Kseny/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar;D:/Users/Kseny/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar;D:/Users/Kseny/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar;D:/Users/Kseny/.m2/repository/org/apache/poi/poi-ooxml/5.2.3/poi-ooxml-5.2.3.jar;D:/Users/Kseny/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.3/poi-ooxml-lite-5.2.3.jar;D:/Users/Kseny/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar;D:/Users/Kseny/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar;D:/Users/Kseny/.m2/repository/com/github/virtuald/curvesapi/1.07/curvesapi-1.07.jar;D:/Users/Kseny/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar'
+'D:/Users/Kseny/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar;D:/Users/Kseny/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar;D:/Users/Kseny/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar;D:/Users/Kseny/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar;D:/Users/Kseny/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar;D:/Users/Kseny/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar;D:/Users/Kseny/.m2/repository/org/apache/poi/poi-ooxml/5.2.3/poi-ooxml-5.2.3.jar;D:/Users/Kseny/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.3/poi-ooxml-lite-5.2.3.jar;D:/Users/Kseny/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar;D:/Users/Kseny/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar;D:/Users/Kseny/.m2/repository/com/github/virtuald/curvesapi/1.07/curvesapi-1.07.jar;D:/Users/Kseny/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar'
 -encoding
 'UTF-8'
 -protected
@@ -25,35 +25,6 @@
 -windowtitle
 'mathProject 0.1 API'
 mephi2023.mathproject
-D:\Users\Kseny\.m2\repository\org\apache\maven\plugins\maven-compiler-plugin\3.8.1\maven-compiler-plugin-3.8.1.jar = 1683104858770
-D:\Users\Kseny\.m2\repository\org\apache\maven\maven-plugin-api\3.0\maven-plugin-api-3.0.jar = 1683104699527
-D:\Users\Kseny\.m2\repository\org\apache\maven\maven-model\3.0\maven-model-3.0.jar = 1683104699484
-D:\Users\Kseny\.m2\repository\org\sonatype\sisu\sisu-inject-plexus\1.4.2\sisu-inject-plexus-1.4.2.jar = 1683104699635
-D:\Users\Kseny\.m2\repository\org\sonatype\sisu\sisu-inject-bean\1.4.2\sisu-inject-bean-1.4.2.jar = 1683104699635
-D:\Users\Kseny\.m2\repository\org\sonatype\sisu\sisu-guice\2.1.7\sisu-guice-2.1.7-noaop.jar = 1683104700036
-D:\Users\Kseny\.m2\repository\org\apache\maven\maven-artifact\3.0\maven-artifact-3.0.jar = 1683104699515
-D:\Users\Kseny\.m2\repository\org\codehaus\plexus\plexus-utils\2.0.4\plexus-utils-2.0.4.jar = 1683104859178
-D:\Users\Kseny\.m2\repository\org\apache\maven\maven-core\3.0\maven-core-3.0.jar = 1683104700290
-D:\Users\Kseny\.m2\repository\org\apache\maven\maven-settings\3.0\maven-settings-3.0.jar = 1683104699761
-D:\Users\Kseny\.m2\repository\org\apache\maven\maven-settings-builder\3.0\maven-settings-builder-3.0.jar = 1683104699869
-D:\Users\Kseny\.m2\repository\org\apache\maven\maven-repository-metadata\3.0\maven-repository-metadata-3.0.jar = 1683104699895
-D:\Users\Kseny\.m2\repository\org\apache\maven\maven-model-builder\3.0\maven-model-builder-3.0.jar = 1683104700074
-D:\Users\Kseny\.m2\repository\org\sonatype\aether\aether-impl\1.7\aether-impl-1.7.jar = 1683104700140
-D:\Users\Kseny\.m2\repository\org\sonatype\aether\aether-spi\1.7\aether-spi-1.7.jar = 1683104700246
-D:\Users\Kseny\.m2\repository\org\sonatype\aether\aether-api\1.7\aether-api-1.7.jar = 1683104700292
-D:\Users\Kseny\.m2\repository\org\sonatype\aether\aether-util\1.7\aether-util-1.7.jar = 1683104700505
-D:\Users\Kseny\.m2\repository\org\codehaus\plexus\plexus-interpolation\1.14\plexus-interpolation-1.14.jar = 1683104700408
-D:\Users\Kseny\.m2\repository\org\codehaus\plexus\plexus-classworlds\2.2.3\plexus-classworlds-2.2.3.jar = 1683104700504
-D:\Users\Kseny\.m2\repository\org\codehaus\plexus\plexus-component-annotations\1.5.5\plexus-component-annotations-1.5.5.jar = 1678882987419
-D:\Users\Kseny\.m2\repository\org\sonatype\plexus\plexus-sec-dispatcher\1.3\plexus-sec-dispatcher-1.3.jar = 1683104345676
-D:\Users\Kseny\.m2\repository\org\sonatype\plexus\plexus-cipher\1.4\plexus-cipher-1.4.jar = 1683104345682
-D:\Users\Kseny\.m2\repository\org\apache\maven\shared\maven-shared-utils\3.2.1\maven-shared-utils-3.2.1.jar = 1683104700674
-D:\Users\Kseny\.m2\repository\org\apache\maven\shared\maven-shared-incremental\1.1\maven-shared-incremental-1.1.jar = 1678882987412
-D:\Users\Kseny\.m2\repository\org\codehaus\plexus\plexus-java\0.9.10\plexus-java-0.9.10.jar = 1683104858901
-D:\Users\Kseny\.m2\repository\org\ow2\asm\asm\6.2\asm-6.2.jar = 1683104858980
-D:\Users\Kseny\.m2\repository\com\thoughtworks\qdox\qdox\2.0-M8\qdox-2.0-M8.jar = 1683104859199
-D:\Users\Kseny\.m2\repository\org\codehaus\plexus\plexus-compiler-api\2.8.4\plexus-compiler-api-2.8.4.jar = 1683104858989
-D:\Users\Kseny\.m2\repository\org\codehaus\plexus\plexus-compiler-manager\2.8.4\plexus-compiler-manager-2.8.4.jar = 1683104859076
 D:\Users\Kseny\.m2\repository\org\apache\poi\poi\5.2.3\poi-5.2.3.jar = 1678882955008
 D:\Users\Kseny\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar = 1678882899289
 D:\Users\Kseny\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar = 1678882914624
@@ -67,23 +38,23 @@ D:\Users\Kseny\.m2\repository\org\apache\commons\commons-compress\1.21\commons-c
 D:\Users\Kseny\.m2\repository\com\github\virtuald\curvesapi\1.07\curvesapi-1.07.jar = 1678882954794
 D:\Users\Kseny\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar = 1678882954489
 D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\src\main\java = 1682596021988
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\allclasses-index.html = 1683115964148
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\allpackages-index.html = 1683115964153
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\copy.svg = 1683115964200
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\element-list = 1683115964014
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\help-doc.html = 1683115964192
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\index-all.html = 1683115964178
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\index.html = 1683115964184
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\jquery-ui.overrides.css = 1683115964219
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\member-search-index.js = 1683115964160
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\module-search-index.js = 1683115964154
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\overview-tree.html = 1683115964126
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\package-search-index.js = 1683115964156
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\script.js = 1683115964198
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\search-page.js = 1683115964206
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\search.html = 1683115964181
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\search.js = 1683115964204
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\serialized-form.html = 1683115964076
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\stylesheet.css = 1683115964196
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\tag-search-index.js = 1683115964162
-D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\type-search-index.js = 1683115964158
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\allclasses-index.html = 1683207224334
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\allpackages-index.html = 1683207224339
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\copy.svg = 1683207224393
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\element-list = 1683207224154
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\help-doc.html = 1683207224382
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\index-all.html = 1683207224369
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\index.html = 1683207224375
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\jquery-ui.overrides.css = 1683207224415
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\member-search-index.js = 1683207224348
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\module-search-index.js = 1683207224341
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\overview-tree.html = 1683207224313
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\package-search-index.js = 1683207224343
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\script.js = 1683207224391
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\search-page.js = 1683207224401
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\search.html = 1683207224372
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\search.js = 1683207224398
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\serialized-form.html = 1683207224254
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\stylesheet.css = 1683207224388
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\tag-search-index.js = 1683207224349
+D:\Users\Kseny\OneDrive\Документы\NetBeansProjects\mathProject\target\apidocs\type-search-index.js = 1683207224345

@@ -5,12 +5,14 @@
 package mephi2023.mathproject;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.table.DefaultTableModel;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
 /**
  *
@@ -255,22 +257,8 @@ public class VisualFrame extends javax.swing.JFrame {
 
     private void loadDataButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadDataButtonActionPerformed
         ds.clearData();
-        //xlsxFileChooser.setVisible(true);            
-        //exceptionLabel.setText("Выберите файл"); 
-        
-        try {
-            int numbVariant = Integer.parseInt(numbVariantTextField.getText());
-            String fileName = ".\\ДЗ4.xlsx";
-            dr.ReadXLSX(ds, fileName, numbVariant);
-            messageLabel.setText("удалось прочитать файл (вариант " + numbVariant + ")");
-            xlsxFileChooser.setVisible(false);     
-            exceptionLabel.setText(""); 
-        } catch (IOException | NumberFormatException ex) {
-            messageLabel.setText("не удалось прочитать файл ");
-            exceptionLabel.setText(ex.getMessage());
-            
-        }
-        
+        xlsxFileChooser.setVisible(true);            
+        exceptionLabel.setText("Выберите файл");
     }//GEN-LAST:event_loadDataButtonActionPerformed
 
     private void countParamButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_countParamButtonActionPerformed
@@ -311,11 +299,11 @@ public class VisualFrame extends javax.swing.JFrame {
             messageLabel.setText("удалось прочитать файл (вариант " + numbVariant + ")");
             xlsxFileChooser.setVisible(false);     
             exceptionLabel.setText(""); 
-        } catch (IOException | NumberFormatException ex) {
+        } catch (IOException | NumberFormatException | InvalidFormatException ex) {
             messageLabel.setText("не удалось прочитать файл ");
             exceptionLabel.setText(ex.getMessage());
             
-        }
+        } 
     }//GEN-LAST:event_xlsxFileChooserActionPerformed
 
 

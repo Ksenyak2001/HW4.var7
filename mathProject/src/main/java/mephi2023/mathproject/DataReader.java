@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -19,6 +20,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
  *
@@ -29,13 +31,11 @@ public class DataReader {
     public DataReader (){
     } 
     
-    public void ReadXLSX(DataStorage ds, String fileName, int variant) throws FileNotFoundException, IOException{
+    public void ReadXLSX(DataStorage ds, String fileName, int variant) throws FileNotFoundException, IOException, InvalidFormatException{
         ArrayList<ArrayList<Double>> samples = new ArrayList<>();
         ArrayList<String> names = new ArrayList<>();
         File file = new File(fileName);
-        FileInputStream fis;
-        fis = new FileInputStream(file);
-        Workbook workbook = WorkbookFactory.create(file);
+        Workbook workbook = new XSSFWorkbook(file);
         Sheet worksheet = workbook.getSheetAt(variant-1);
         int cols = worksheet.getRow(0).getLastCellNum();
         for (int i = 0; i < cols; ++i){
