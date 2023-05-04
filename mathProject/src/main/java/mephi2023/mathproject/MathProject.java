@@ -4,13 +4,6 @@
 
 package mephi2023.mathproject;
 
-
-
-
-/**
- *
- * @author Kseny
- */
 public class MathProject {
 
     public static void main(String args[]) {

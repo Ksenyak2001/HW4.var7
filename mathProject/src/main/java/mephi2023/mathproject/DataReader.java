@@ -35,7 +35,7 @@ public class DataReader {
         File file = new File(fileName);
         FileInputStream fis;
         fis = new FileInputStream(file);
-        Workbook workbook = WorkbookFactory.create(fis);
+        Workbook workbook = WorkbookFactory.create(file);
         Sheet worksheet = workbook.getSheetAt(variant-1);
         int cols = worksheet.getRow(0).getLastCellNum();
         for (int i = 0; i < cols; ++i){

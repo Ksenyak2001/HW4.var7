@@ -23,7 +23,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="startPanel" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -35,7 +35,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="startPanel" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -54,16 +54,16 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="exceptionLabel" max="32767" attributes="0"/>
-                      <Component id="countParamButton" max="32767" attributes="0"/>
-                      <Component id="tableScrollPane" max="32767" attributes="0"/>
-                      <Component id="corTableScrollPane" alignment="0" max="32767" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="nameLabel" min="-2" pref="290" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="closeButton" min="-2" max="-2" attributes="0"/>
-                      </Group>
                       <Group type="102" attributes="0">
+                          <Component id="closeButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                          <Component id="nameLabel" min="-2" pref="290" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="exceptionLabel" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tableScrollPane" alignment="0" max="32767" attributes="0"/>
+                          <Component id="corTableScrollPane" alignment="0" max="32767" attributes="0"/>
+                          <Component id="countParamButton" alignment="0" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="messageLabel" min="-2" pref="250" max="-2" attributes="0"/>
@@ -80,10 +80,11 @@
                                   <Component id="exportDataButton" min="-2" pref="244" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
+                  <Component id="xlsxFileChooser" min="-2" pref="343" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -91,33 +92,35 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="nameLabel" min="-2" pref="47" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Component id="closeButton" max="32767" attributes="0"/>
-                          <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="tableScrollPane" min="-2" pref="209" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="corTableScrollPane" min="-2" pref="92" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="countParamButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="loadDataButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="numbVariantTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="exportDataButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="closeButton" alignment="3" pref="47" max="32767" attributes="0"/>
+                      <Component id="nameLabel" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace pref="7" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="messageLabel" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="numbVariantLabel" min="-2" max="-2" attributes="0"/>
-                      <Component id="messageExpLabel" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="tableScrollPane" min="-2" pref="209" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="corTableScrollPane" min="-2" pref="92" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="countParamButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="loadDataButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="numbVariantTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="exportDataButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="messageLabel" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="numbVariantLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="messageExpLabel" min="-2" pref="20" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="exceptionLabel" min="-2" pref="14" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="xlsxFileChooser" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="exceptionLabel" pref="21" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -267,6 +270,11 @@
               <Font name="Segoe UI" size="10" style="3"/>
             </Property>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JFileChooser" name="xlsxFileChooser">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="xlsxFileChooserActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

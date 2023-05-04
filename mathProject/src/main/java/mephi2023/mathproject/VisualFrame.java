@@ -4,10 +4,12 @@
  */
 package mephi2023.mathproject;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFileChooser;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -23,6 +25,9 @@ public class VisualFrame extends javax.swing.JFrame {
         dr = new DataReader();
         ds = new DataStorage();
         numbVariantTextField.setText("7");
+        
+        xlsxFileChooser.setCurrentDirectory(new File(".\\"));
+        xlsxFileChooser.setVisible(false);
         
         DefaultTableModel model = DataManipulation.drawModel(new ArrayList<>(), new ArrayList<>(), 
                                                              ds.getNamesParameters(), 0);
@@ -57,6 +62,7 @@ public class VisualFrame extends javax.swing.JFrame {
         messageExpLabel = new javax.swing.JLabel();
         closeButton = new javax.swing.JButton();
         exceptionLabel = new javax.swing.JLabel();
+        xlsxFileChooser = new javax.swing.JFileChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -157,6 +163,12 @@ public class VisualFrame extends javax.swing.JFrame {
 
         exceptionLabel.setFont(new java.awt.Font("Segoe UI", 3, 10)); // NOI18N
 
+        xlsxFileChooser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xlsxFileChooserActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout startPanelLayout = new javax.swing.GroupLayout(startPanel);
         startPanel.setLayout(startPanelLayout);
         startPanelLayout.setHorizontalGroup(
@@ -164,15 +176,15 @@ public class VisualFrame extends javax.swing.JFrame {
             .addGroup(startPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(startPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(exceptionLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(countParamButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(tableScrollPane)
-                    .addComponent(corTableScrollPane)
                     .addGroup(startPanelLayout.createSequentialGroup()
-                        .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(closeButton))
-                    .addGroup(startPanelLayout.createSequentialGroup()
+                        .addComponent(closeButton)
+                        .addGap(62, 62, 62)
+                        .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(startPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(exceptionLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tableScrollPane, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(corTableScrollPane, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(countParamButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(startPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(startPanelLayout.createSequentialGroup()
                                 .addComponent(messageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -185,37 +197,39 @@ public class VisualFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(numbVariantTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(exportDataButton, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addComponent(exportDataButton, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(xlsxFileChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         startPanelLayout.setVerticalGroup(
             startPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(startPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(startPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(startPanelLayout.createSequentialGroup()
-                        .addComponent(closeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(7, 7, 7)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tableScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(corTableScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(countParamButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(startPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(loadDataButton)
-                    .addComponent(numbVariantTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(exportDataButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(closeButton, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                    .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                 .addGroup(startPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(messageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(numbVariantLabel)
-                    .addComponent(messageExpLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(exceptionLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 21, Short.MAX_VALUE)
+                    .addGroup(startPanelLayout.createSequentialGroup()
+                        .addComponent(tableScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(corTableScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(countParamButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(startPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(loadDataButton)
+                            .addComponent(numbVariantTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(exportDataButton))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(startPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(messageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(numbVariantLabel)
+                            .addComponent(messageExpLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(exceptionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(xlsxFileChooser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -240,14 +254,21 @@ public class VisualFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loadDataButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadDataButtonActionPerformed
+        ds.clearData();
+        //xlsxFileChooser.setVisible(true);            
+        //exceptionLabel.setText("Выберите файл"); 
+        
         try {
-            ds.clearData();
             int numbVariant = Integer.parseInt(numbVariantTextField.getText());
-            dr.ReadXLSX(ds, ".\\ДЗ4.xlsx", numbVariant);
-            messageLabel.setText("удалось прочитать файл (вариант " + numbVariant + ")");            
+            String fileName = ".\\ДЗ4.xlsx";
+            dr.ReadXLSX(ds, fileName, numbVariant);
+            messageLabel.setText("удалось прочитать файл (вариант " + numbVariant + ")");
+            xlsxFileChooser.setVisible(false);     
+            exceptionLabel.setText(""); 
         } catch (IOException | NumberFormatException ex) {
             messageLabel.setText("не удалось прочитать файл ");
             exceptionLabel.setText(ex.getMessage());
+            
         }
         
     }//GEN-LAST:event_loadDataButtonActionPerformed
@@ -282,6 +303,21 @@ public class VisualFrame extends javax.swing.JFrame {
   
     }//GEN-LAST:event_closeButtonActionPerformed
 
+    private void xlsxFileChooserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xlsxFileChooserActionPerformed
+        try {
+            int numbVariant = Integer.parseInt(numbVariantTextField.getText());
+            String fileName = xlsxFileChooser.getSelectedFile().getAbsolutePath();
+            dr.ReadXLSX(ds, fileName, numbVariant);
+            messageLabel.setText("удалось прочитать файл (вариант " + numbVariant + ")");
+            xlsxFileChooser.setVisible(false);     
+            exceptionLabel.setText(""); 
+        } catch (IOException | NumberFormatException ex) {
+            messageLabel.setText("не удалось прочитать файл ");
+            exceptionLabel.setText(ex.getMessage());
+            
+        }
+    }//GEN-LAST:event_xlsxFileChooserActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton closeButton;
@@ -299,5 +335,6 @@ public class VisualFrame extends javax.swing.JFrame {
     private javax.swing.JTable parametersTable;
     private javax.swing.JPanel startPanel;
     private javax.swing.JScrollPane tableScrollPane;
+    private javax.swing.JFileChooser xlsxFileChooser;
     // End of variables declaration//GEN-END:variables
 }
